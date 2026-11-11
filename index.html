@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="css/hero.css" />
     <link rel="stylesheet" href="css/members.css" />
     <link rel="stylesheet" href="css/quests.css" />
-    <!-- NOVO: folha da seção de classes -->
     <link rel="stylesheet" href="css/classes.css" />
     <link rel="stylesheet" href="css/footer.css" />
   </head>
@@ -72,6 +71,8 @@
         <h2>Membros de destaque</h2>
         <p>Os cinco aventureiros de maior nível da guilda.</p>
 
+        <!-- NOVO: cada imagem de retrato ganhou um style com o enquadramento dela
+             (--focus e --zoom), lido pela regra .member-portrait img do members.css -->
         <ol class="members">
           <li>
             <article class="member warrior">
@@ -81,7 +82,13 @@
               <p class="member-title">A Lâmina Rubra</p>
               <p class="member-class">Guerreira · Nível 60</p>
               <div class="member-portrait">
-                <img src="assets/thalindra-warrior.jpg" alt="Retrato de Thalindra, a guerreira" width="1024" height="559" />
+                <img
+                  src="assets/thalindra-warrior.jpg"
+                  alt="Retrato de Thalindra, a guerreira"
+                  width="1024"
+                  height="559"
+                  style="--focus: 49% 6%; --zoom: 1.35"
+                />
               </div>
               <button class="member-open" type="button">
                 Ver ficha<span class="sr-only"> de Thalindra</span>
@@ -95,7 +102,13 @@
               <p class="member-title">Olho de Falcão</p>
               <p class="member-class">Arqueira · Nível 57</p>
               <div class="member-portrait">
-                <img src="assets/yssa-archer.jpg" alt="Retrato de Yssa, a arqueira" width="853" height="559" />
+                <img
+                  src="assets/yssa-archer.jpg"
+                  alt="Retrato de Yssa, a arqueira"
+                  width="853"
+                  height="559"
+                  style="--focus: 51% 8%; --zoom: 1.3"
+                />
               </div>
               <button class="member-open" type="button">
                 Ver ficha<span class="sr-only"> de Yssa</span>
@@ -109,7 +122,13 @@
               <p class="member-title">O Tecelão de Tempestades</p>
               <p class="member-class">Mago · Nível 55</p>
               <div class="member-portrait">
-                <img src="assets/bromm-mage.jpg" alt="Retrato de Bromm, o mago" width="1024" height="559" />
+                <img
+                  src="assets/bromm-mage.jpg"
+                  alt="Retrato de Bromm, o mago"
+                  width="1024"
+                  height="559"
+                  style="--focus: 51% 10%; --zoom: 1.35"
+                />
               </div>
               <button class="member-open" type="button">
                 Ver ficha<span class="sr-only"> de Bromm</span>
@@ -123,7 +142,13 @@
               <p class="member-title">Sombra Silenciosa</p>
               <p class="member-class">Ladino · Nível 52</p>
               <div class="member-portrait">
-                <img src="assets/dravyn-rogue.jpg" alt="Retrato de Dravyn, o ladino" width="883" height="559" />
+                <img
+                  src="assets/dravyn-rogue.jpg"
+                  alt="Retrato de Dravyn, o ladino"
+                  width="883"
+                  height="559"
+                  style="--focus: 53% 10%; --zoom: 1.3"
+                />
               </div>
               <button class="member-open" type="button">
                 Ver ficha<span class="sr-only"> de Dravyn</span>
@@ -137,7 +162,13 @@
               <p class="member-title">Portador da Aurora</p>
               <p class="member-class">Clérigo · Nível 50</p>
               <div class="member-portrait">
-                <img src="assets/doran-cleric.jpg" alt="Retrato de Doran, o clérigo" width="1024" height="565" />
+                <img
+                  src="assets/doran-cleric.jpg"
+                  alt="Retrato de Doran, o clérigo"
+                  width="1024"
+                  height="565"
+                  style="--focus: 53% 12%; --zoom: 1.3"
+                />
               </div>
               <button class="member-open" type="button">
                 Ver ficha<span class="sr-only"> de Doran</span>
@@ -211,7 +242,7 @@
         <h2>Classes disponíveis</h2>
         <p>A guilda aceita todas as vocações. Cada caminho cobra seu preço, escolha o seu com sabedoria.</p>
 
-        <!-- NOVO: cards das classes. Cada li recebe a classe da vocação (warrior, mage...) e herda a --class-color dela -->
+        <!-- Cada li recebe a classe da vocação (warrior, mage...) e herda a --class-color dela -->
         <ul class="class-cards">
           <li class="warrior">
             <span class="ra ra-broadsword" aria-hidden="true"></span>
