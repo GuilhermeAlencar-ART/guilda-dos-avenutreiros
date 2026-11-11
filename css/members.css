@@ -96,21 +96,24 @@
      }
 
 
-.members img {
+.member-portrait img {
     width: 100%;
     height: auto;
     aspect-ratio: 4/5;
     object-position: 50% 20%;
     object-fit: cover;
-    object-position: 50% 20%;
-    transition: filter 0.5s;
-
+    object-position: var(--focus, 50% 20%);
+    transition: filter 0.5s, 
+    scale 0.6s var(--ease-out);
+    scale: var(--zoom, 1);
+    transform-origin: var(--focus,50% 20%) ;
 
 
 }
 
-.member:is(:hover :focus-within) img {
+.member:is(:hover :focus-within) .member-portrait img {
     filter: saturate(1.2) brightness(1.08);
+    scale:  calc(var(--zoom, 1) * 1.06);
 
 }
 
