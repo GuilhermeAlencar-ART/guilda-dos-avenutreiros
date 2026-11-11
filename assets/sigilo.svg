@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 200 200"
+     fill="none"
+     stroke="#c9a24b"
+     stroke-width=".6">
+  <circle cx="100" cy="100" r="97"/>
+  <circle cx="100" cy="100" r="90" stroke-dasharray="1 5"/>
+  <polygon points="100,14 174.5,57 174.5,143 100,186 25.5,143 25.5,57"/>
+  <circle cx="100" cy="100" r="62"/>
+  <path d="M100 38 153.7 131H46.3ZM100 162 46.3 69H153.7Z"/>
+  <circle cx="100" cy="100" r="8"/>
+</svg>

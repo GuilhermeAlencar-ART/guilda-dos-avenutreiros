@@ -1,0 +1,235 @@
+* ,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ 
+    
+      :root {
+  font-size: 62.5%;
+
+  /* Cores */
+  --color-bg: #0b0908;
+  --color-surface: #15110e;
+  --color-surface-2: #201914;
+  --color-border: #3b2f24;
+  --color-gold: #c9a24b;
+  --color-gold-light: #f0d58a;
+  --color-blood: #7a1a16;
+  --color-blood-bright: #b3261e;
+  --color-text: #e8dcc6;
+  --color-text-muted: #a39483;
+  --color-text-faint: #6f6255;
+  --color-ember: #d9826b; 
+
+  /* Fontes */
+  --font-display: 'Cinzel Decorative', 'Cinzel', Georgia, serif;
+  --font-label: 'Cinzel', Georgia, serif;
+  --font-body: 'Alegreya', Georgia, serif;
+
+  /* Layout */
+  --content-width: 116rem;
+
+  /* movimento */
+  --ease-out: cubic-bezier(0.2,  0.7, 0.2, 1)
+}
+
+.warrior { --class-color: #6ea6f0; } /* azul-aço */
+.mage    { --class-color: #f07a4a; } /* brasa */
+.archer  { --class-color: #6fd694; } /* verde-floresta */
+.cleric  { --class-color: #f2dd96; } /* luz sagrada */
+.rogue   { --class-color: #b58af0; } /* violeta das sombras */
+
+.warrior,
+.mage,
+.archer,
+.cleric,
+.rogue  {
+ --class-grow: color-mix(in srgb, var(--class-color) 30%, transparent)
+ --class-neon: 0 0 1.2rem -0.2rem var(--class-grow),
+              0 0 3.2rem -1.2rem var(var(--class-grow))
+}
+
+    
+
+    
+body {
+  font-family: 'Alegreya', Georgia, serif;
+  font-family: var(--font-body);
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: radial-gradient(96rem  64rem at 50% 0%, #2b1410, transparent 78%) no-repeat, var(--color-bg);
+
+}
+
+body::before {
+  content: "" ;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center,transparent 50%, rgb(0 0 0 / 0.6));
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Cinzel Decorative', 'Cinzel', Georgia, serif;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+main > section{
+  scroll-margin-top: 6.4rem;
+padding-block: 6.4rem;
+padding-inline: max(2rem, (100% - var(--content-width)) / 2);
+}
+
+main > section + section{
+    border-top: 1px solid var(--color-border);
+
+}
+
+main h2::after {
+  content:  "✦";
+  display: block;
+  width: min(25.6rem, 70%);
+  margin: 1rem auto 0;
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--color-gold);
+  background: linear-gradient(90deg, transparent,var(--color-gold) 40%, transparent 44% 56%, var(--color-gold) 60%, transparent)
+  center / 100% 1px no-repeat;
+}
+
+
+main h2 {
+   font-size: clamp(2.8rem, 5vw, 4.6rem);
+  line-height: 1.15;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--color-gold-light);
+
+
+}
+
+main h2 + p {
+ max-width: 52ch;
+ font-size: 1.9rem;
+ font-style: italic;
+text-align: center;
+color: var(--color-text-muted);
+margin: 2rem auto 5.6rem;
+}
+
+:where(a[href^="https"]) {
+  color: var(--color-gold);
+  font-weight: bold;
+}
+
+a[href^="https"]::after {
+  content: "↗";
+  font-size: 0.8em;
+  color: var(--color-gold);
+}
+
+
+
+    
+
+
+.button, .site-header nav a {
+    cursor: pointer;
+}
+
+
+.button {
+  display: inline-block;
+  padding: 1.5rem 2.9rem;
+  font-family: var(--font-label);
+  background: linear-gradient(180deg, var(--color-blood-bright), var(--color-blood));
+  color: var(--color-gold-light);
+  text-decoration: none;
+  border: 1px solid var(--color-gold);
+  border-radius: 0.4rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18rem;
+  transition: translate.3s var(--ease-out),
+  filter 0.3s,
+  box shadow 0.3s;
+
+}
+
+.button:hover {
+  
+  translate: 0 -0.2rem;
+  filter: brightness(1.15);
+  box-shadow: 0 1.4rem 4rem -0.8rem rgb(179 38 30 / 0.9);
+
+}
+
+
+
+.button,
+.site-header nav a {
+
+  cursor: pointer;
+
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold-light);
+  outline-offset: 3px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  top: -6.4rem;
+  left: 1.6rem;
+  z-index: 200;
+  padding: 0.8rem 1.6rem ;
+  font-family: var(--font-label);
+  font-size: 1.4rem;
+  color: var(--color-bg);
+  background: var(--color-gold);
+
+
+}
+
+
+.skip-link:focus {
+  top: 1.6rem;
+}
+
+
+@keyframes spin {
+  to {
+    rotate: 360deg;
+  }
+}
+
+
+
+

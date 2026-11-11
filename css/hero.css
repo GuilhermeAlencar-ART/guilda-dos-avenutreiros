@@ -1,0 +1,165 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  text-align: center;
+  padding-block: 8rem;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 105%, rgb(179 38 30 / 0.38), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 50% 40%, rgb(201 162 75 / 0.08), transparent 70%);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: min(95vmin, 74rem);
+  aspect-ratio: 1;
+  opacity: 0.2;
+  background: url(../assets/sigilo.svg) center / contain no-repeat;
+  animation: spin 140s linear infinite;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgb(255 150 70 / 0.9) 0 1px, transparent 2px),
+    radial-gradient(circle, rgb(255 190 110 / 0.6) 0 1.5px, transparent 2.5px),
+    radial-gradient(circle, rgb(230 80 40 / 0.7) 0 2px, transparent 3px);
+  background-size:
+    17rem 24rem,
+    25rem 33rem,
+    34rem 42rem;
+  background-position:
+    0 0,
+    9rem 12rem,
+    20rem 6rem;
+  mask-image: linear-gradient(to top, #000 10%, transparent 85%);
+  animation: embers 16s linear infinite;
+}
+
+.hero-eyebrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  font-family: var(--font-label);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: var(--color-ember);
+}
+
+.hero-eyebrow::before,
+.hero-eyebrow::after {
+  content: "";
+  display: none;
+  width: 4.8rem;
+  height: 0.1rem;
+  background: linear-gradient(90deg, transparent, currentColor);
+}
+
+.hero-eyebrow::after {
+  rotate: 180deg;
+}
+
+.hero > * {
+  animation: rise 1s var(--ease-out) both;
+}
+
+.hero h1 {
+  font-size: clamp(3.4rem, 8.5vw, 9.6rem);
+  font-weight: 900;
+  line-height: 1.05;
+  margin: 1.2rem 0;
+  color: var(--color-gold-light);
+  filter: drop-shadow(0 0 2.4rem rgb(201 162 75 / 0.3));
+  animation:
+    rise 1s 0.15s var(--ease-out) both,
+    flicker 4s 1.2s ease-in-out infinite alternate;
+}
+
+.hero h1 + p {
+  color: var(--color-text-muted);
+  max-width: 38ch;
+  margin-inline: auto;
+  font-size: clamp(1.8rem, 2.2vw, 2.2rem);
+  font-style: italic;
+  animation-delay: 0.3s;
+}
+
+.hero-actions {
+  margin-top: 2rem;
+  animation-delay:0.45s;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2.4rem;
+  margin-top: 3.2rem;
+  padding-top: 2.4rem;
+  border-top: 1px solid var(--color-border);
+  animation-delay: 0.6s;
+}
+
+.hero-stats dt {
+  font-size: 1rem;
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: 0.16rem;
+  color: var(--color-text-muted);
+}
+
+.hero-stats dd {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  font-family: var(--font-display);
+  color: var(--color-gold-light);
+}
+
+.hero-stats div + div {
+  padding-left: 2.4rem;
+  border-left: 1px solid var(--color-border);
+}
+
+@media (min-width: 640px) {
+  .hero-eyebrow::before,
+  .hero-eyebrow::after {
+    display: block;
+  }
+}
+
+
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    translate: 0 2.4rem;
+  }
+}
+
+@keyframes flicker {
+  from {
+    filter: drop-shadow(0 0 2rem rgb(201 162 75 / 0.25));
+  }
+  to {
+    filter: drop-shadow(0 0 3.6rem rgb(230 120 60 / 0.45));
+  }
+}
+
+@keyframes embers {
+  to {
+    background-position:
+      0 -24rem,
+      -16rem -21rem,
+      20rem -36rem;
+  }
+}

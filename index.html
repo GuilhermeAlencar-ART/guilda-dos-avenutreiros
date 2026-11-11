@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guilda dos Aventureiros</title>
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;1,400&family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;700&display=swap"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rpg-awesome/0.2.0/css/rpg-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/members.css" />
+    <link rel="stylesheet" href="css/quests.css" />
+    <!-- NOVO: folha da seção de classes -->
+    <link rel="stylesheet" href="css/classes.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#content">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <a class="brand" href="#home">
+        <span class="ra ra-castle-emblem" aria-hidden="true"></span>
+        Guilda dos Aventureiros
+      </a>
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li><a href="#members">Membros</a></li>
+          <li><a href="#quests">Missões</a></li>
+          <li><a href="#races">Raças</a></li>
+          <li><a href="#classes">Classes</a></li>
+          <li><a href="#join">Entrar na guilda</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="content">
+      <section id="home" class="hero">
+        <p class="hero-eyebrow">Uma guilda, mil lendas</p>
+        <h1>Guilda dos Aventureiros</h1>
+        <p>Acompanhe nossos heróis, escolha sua raça e sua classe e junte-se a nós.</p>
+        <div class="hero-actions">
+          <a class="button" href="#join">Entrar na guilda</a>
+        </div>
+        <dl class="hero-stats">
+          <div>
+            <dt>Membros ativos</dt>
+            <dd>1.248</dd>
+          </div>
+          <div>
+            <dt>Missões cumpridas</dt>
+            <dd>3.970</dd>
+          </div>
+          <div>
+            <dt>Anos de história</dt>
+            <dd>412</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="members">
+        <h2>Membros de destaque</h2>
+        <p>Os cinco aventureiros de maior nível da guilda.</p>
+
+        <ol class="members">
+          <li>
+            <article class="member warrior">
+              <span class="ra ra-crown member-crown" aria-hidden="true"></span>
+              <span class="member-rank" aria-hidden="true">I</span>
+              <h3>Thalindra</h3>
+              <p class="member-title">A Lâmina Rubra</p>
+              <p class="member-class">Guerreira · Nível 60</p>
+              <div class="member-portrait">
+                <img src="assets/thalindra-warrior.jpg" alt="Retrato de Thalindra, a guerreira" width="1024" height="559" />
+              </div>
+              <button class="member-open" type="button">
+                Ver ficha<span class="sr-only"> de Thalindra</span>
+              </button>
+            </article>
+          </li>
+          <li>
+            <article class="member archer">
+              <span class="member-rank" aria-hidden="true">II</span>
+              <h3>Yssa</h3>
+              <p class="member-title">Olho de Falcão</p>
+              <p class="member-class">Arqueira · Nível 57</p>
+              <div class="member-portrait">
+                <img src="assets/yssa-archer.jpg" alt="Retrato de Yssa, a arqueira" width="853" height="559" />
+              </div>
+              <button class="member-open" type="button">
+                Ver ficha<span class="sr-only"> de Yssa</span>
+              </button>
+            </article>
+          </li>
+          <li>
+            <article class="member mage">
+              <span class="member-rank" aria-hidden="true">III</span>
+              <h3>Bromm</h3>
+              <p class="member-title">O Tecelão de Tempestades</p>
+              <p class="member-class">Mago · Nível 55</p>
+              <div class="member-portrait">
+                <img src="assets/bromm-mage.jpg" alt="Retrato de Bromm, o mago" width="1024" height="559" />
+              </div>
+              <button class="member-open" type="button">
+                Ver ficha<span class="sr-only"> de Bromm</span>
+              </button>
+            </article>
+          </li>
+          <li>
+            <article class="member rogue">
+              <span class="member-rank" aria-hidden="true">IV</span>
+              <h3>Dravyn</h3>
+              <p class="member-title">Sombra Silenciosa</p>
+              <p class="member-class">Ladino · Nível 52</p>
+              <div class="member-portrait">
+                <img src="assets/dravyn-rogue.jpg" alt="Retrato de Dravyn, o ladino" width="883" height="559" />
+              </div>
+              <button class="member-open" type="button">
+                Ver ficha<span class="sr-only"> de Dravyn</span>
+              </button>
+            </article>
+          </li>
+          <li>
+            <article class="member cleric">
+              <span class="member-rank" aria-hidden="true">V</span>
+              <h3>Doran</h3>
+              <p class="member-title">Portador da Aurora</p>
+              <p class="member-class">Clérigo · Nível 50</p>
+              <div class="member-portrait">
+                <img src="assets/doran-cleric.jpg" alt="Retrato de Doran, o clérigo" width="1024" height="565" />
+              </div>
+              <button class="member-open" type="button">
+                Ver ficha<span class="sr-only"> de Doran</span>
+              </button>
+            </article>
+          </li>
+        </ol>
+      </section>
+
+      <section id="quests">
+        <h2>Mural de missões</h2>
+        <p>Contratos abertos pregados no salão da guilda. Escolha uma missão à altura do seu nível.</p>
+
+        <div class="quest-board">
+          <article class="quest">
+            <p class="quest-seal">S</p>
+            <span class="ra ra-wyvern quest-icon" aria-hidden="true"></span>
+            <h3>O Wyrm das Cavernas Negras</h3>
+            <p>Um wyrm ancião despertou sob as montanhas e devora as caravanas que seguem para o norte.</p>
+            <dl class="quest-info">
+              <div><dt>Recompensa</dt><dd>5.000 moedas</dd></div>
+              <div><dt>Nível mínimo</dt><dd>50</dd></div>
+            </dl>
+            <a class="quest-link" href="#join">Aceitar missão</a>
+          </article>
+
+          <article class="quest">
+            <p class="quest-seal">A</p>
+            <span class="ra ra-tombstone quest-icon" aria-hidden="true"></span>
+            <h3>A Cripta do Rei Esquecido</h3>
+            <p>Mortos-vivos deixam a cripta a cada lua nova. Descubra quem os desperta e ponha fim ao ritual.</p>
+            <dl class="quest-info">
+              <div><dt>Recompensa</dt><dd>2.500 moedas</dd></div>
+              <div><dt>Nível mínimo</dt><dd>35</dd></div>
+            </dl>
+            <a class="quest-link" href="#join">Aceitar missão</a>
+          </article>
+
+          <article class="quest">
+            <p class="quest-seal">B</p>
+            <span class="ra ra-lantern-flame quest-icon" aria-hidden="true"></span>
+            <h3>Escolta até Porto Cinzento</h3>
+            <p>Um mercador paga bem para chegar vivo ao porto pela Estrada dos Enforcados.</p>
+            <dl class="quest-info">
+              <div><dt>Recompensa</dt><dd>800 moedas</dd></div>
+              <div><dt>Nível mínimo</dt><dd>20</dd></div>
+            </dl>
+            <a class="quest-link" href="#join">Aceitar missão</a>
+          </article>
+
+          <article class="quest">
+            <p class="quest-seal">D</p>
+            <span class="ra ra-sprout quest-icon" aria-hidden="true"></span>
+            <h3>Ervas da Floresta Sussurrante</h3>
+            <p>O boticário precisa de raiz-da-lua antes do inverno. Cuidado com os lobos após o anoitecer.</p>
+            <dl class="quest-info">
+              <div><dt>Recompensa</dt><dd>150 moedas</dd></div>
+              <div><dt>Nível mínimo</dt><dd>5</dd></div>
+            </dl>
+            <a class="quest-link" href="#join">Aceitar missão</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="races">
+        <h2>Raças aceitas</h2>
+        <p>A guilda recebe aventureiros de todos os povos.</p>
+      </section>
+
+      <section id="classes">
+        <h2>Classes disponíveis</h2>
+        <p>A guilda aceita todas as vocações. Cada caminho cobra seu preço, escolha o seu com sabedoria.</p>
+
+        <!-- NOVO: cards das classes. Cada li recebe a classe da vocação (warrior, mage...) e herda a --class-color dela -->
+        <ul class="class-cards">
+          <li class="warrior">
+            <span class="ra ra-broadsword" aria-hidden="true"></span>
+            <h3>Guerreiro</h3>
+            <p>Aço, escudo e coragem na linha de frente.</p>
+          </li>
+          <li class="mage">
+            <span class="ra ra-crystal-wand" aria-hidden="true"></span>
+            <h3>Mago</h3>
+            <p>Domina os arcanos e dobra o fogo à sua vontade.</p>
+          </li>
+          <li class="archer">
+            <span class="ra ra-arrow-cluster" aria-hidden="true"></span>
+            <h3>Arqueiro</h3>
+            <p>Olhos de falcão e flechas que nunca erram.</p>
+          </li>
+          <li class="cleric">
+            <span class="ra ra-sun-symbol" aria-hidden="true"></span>
+            <h3>Clérigo</h3>
+            <p>Canaliza a luz divina para curar e proteger.</p>
+          </li>
+          <li class="rogue">
+            <span class="ra ra-hood" aria-hidden="true"></span>
+            <h3>Ladino</h3>
+            <p>Caminha nas sombras e abre qualquer fechadura.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="faq">
+        <h2>Perguntas frequentes</h2>
+        <p>Tudo o que um novo aventureiro precisa saber.</p>
+      </section>
+
+      <section id="join">
+        <h2>Entrar na guilda</h2>
+        <p>Preencha sua ficha de registro.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <nav aria-labelledby="footer-links-title">
+        <h2 id="footer-links-title">Links úteis</h2>
+        <ul>
+          <li><a href="https://exemplo-wiki-da-guilda.com">Wiki da guilda</a></li>
+          <li><a href="https://exemplo-forum-da-guilda.com">Fórum de aventureiros</a></li>
+          <li><a href="#faq">Regras internas</a></li>
+        </ul>
+      </nav>
+      <p><small>© 2026 Guilda dos Aventureiros</small></p>
+    </footer>
+  </body>
+</html>
