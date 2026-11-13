@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="css/hero.css" />
     <link rel="stylesheet" href="css/members.css" />
     <link rel="stylesheet" href="css/quests.css" />
+    <!-- NOVO: folha de estilo da seção de raças -->
+    <link rel="stylesheet" href="css/races.css" />
     <link rel="stylesheet" href="css/classes.css" />
     <link rel="stylesheet" href="css/footer.css" />
   </head>
@@ -71,7 +73,7 @@
         <h2>Membros de destaque</h2>
         <p>Os cinco aventureiros de maior nível da guilda.</p>
 
-        <!-- NOVO: cada imagem de retrato ganhou um style com o enquadramento dela
+        <!-- Cada imagem de retrato tem um style com o enquadramento dela
              (--focus e --zoom), lido pela regra .member-portrait img do members.css -->
         <ol class="members">
           <li>
@@ -127,7 +129,7 @@
                   alt="Retrato de Bromm, o mago"
                   width="1024"
                   height="559"
-                  style="--focus: 51% 10%; --zoom: 1.35"
+                  style="--focus: 51% 20%; --zoom: 1.35"
                 />
               </div>
               <button class="member-open" type="button">
@@ -167,7 +169,7 @@
                   alt="Retrato de Doran, o clérigo"
                   width="1024"
                   height="565"
-                  style="--focus: 53% 12%; --zoom: 1.3"
+                  style="--focus: 53% 30%; --zoom: 1.3"
                 />
               </div>
               <button class="member-open" type="button">
@@ -235,7 +237,130 @@
 
       <section id="races">
         <h2>Raças aceitas</h2>
-        <p>A guilda recebe aventureiros de todos os povos.</p>
+        <!-- NOVO: o texto de apoio agora avisa que os cards viram -->
+        <p>
+          A guilda recebe aventureiros de todos os povos. Passe o cursor ou toque em um card para ver os traços de cada
+          raça.
+        </p>
+
+        <!-- NOVO: lista das seis raças. Cada li é o "palco" (não gira), o article.race-card é a
+             carta que gira, e dentro dela ficam as duas faces: .race-front e .race-back.
+             O tabindex="0" deixa o card alcançável pela tecla Tab, mesmo sem ser link nem botão -->
+        <ul class="races">
+          <li>
+            <article class="race-card" tabindex="0">
+              <div class="race-front">
+                <span class="ra ra-knight-helmet" aria-hidden="true"></span>
+                <h3>Humano</h3>
+                <p>Ambiciosos e adaptáveis, erguem reinos em uma única geração.</p>
+              </div>
+              <div class="race-back">
+                <p class="race-back-title">Traços raciais</p>
+                <dl>
+                  <div><dt>Bônus</dt><dd>+1 em tudo</dd></div>
+                  <div><dt>Longevidade</dt><dd>80 anos</dd></div>
+                  <div><dt>Talento</dt><dd>Aprendizado rápido</dd></div>
+                  <div><dt>Classes afins</dt><dd>Todas</dd></div>
+                </dl>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="race-card" tabindex="0">
+              <div class="race-front">
+                <span class="ra ra-leaf" aria-hidden="true"></span>
+                <h3>Elfo</h3>
+                <p>Filhos da floresta antiga, guardam segredos de eras esquecidas.</p>
+              </div>
+              <div class="race-back">
+                <p class="race-back-title">Traços raciais</p>
+                <dl>
+                  <div><dt>Bônus</dt><dd>+2 Destreza</dd></div>
+                  <div><dt>Longevidade</dt><dd>750 anos</dd></div>
+                  <div><dt>Talento</dt><dd>Visão no escuro</dd></div>
+                  <div><dt>Classes afins</dt><dd>Arqueiro, Mago</dd></div>
+                </dl>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="race-card" tabindex="0">
+              <div class="race-front">
+                <span class="ra ra-anvil" aria-hidden="true"></span>
+                <h3>Anão</h3>
+                <p>Mestres da forja e da pedra, teimosos como as montanhas onde vivem.</p>
+              </div>
+              <div class="race-back">
+                <p class="race-back-title">Traços raciais</p>
+                <dl>
+                  <div><dt>Bônus</dt><dd>+2 Constituição</dd></div>
+                  <div><dt>Longevidade</dt><dd>350 anos</dd></div>
+                  <div><dt>Talento</dt><dd>Resistência a venenos</dd></div>
+                  <div><dt>Classes afins</dt><dd>Guerreiro, Clérigo</dd></div>
+                </dl>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="race-card" tabindex="0">
+              <div class="race-front">
+                <span class="ra ra-battered-axe" aria-hidden="true"></span>
+                <h3>Orc</h3>
+                <p>Nascidos para a guerra, honram acima de tudo a força e a palavra dada.</p>
+              </div>
+              <div class="race-back">
+                <p class="race-back-title">Traços raciais</p>
+                <dl>
+                  <div><dt>Bônus</dt><dd>+2 Força</dd></div>
+                  <div><dt>Longevidade</dt><dd>60 anos</dd></div>
+                  <div><dt>Talento</dt><dd>Fúria implacável</dd></div>
+                  <div><dt>Classes afins</dt><dd>Guerreiro</dd></div>
+                </dl>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="race-card" tabindex="0">
+              <div class="race-front">
+                <span class="ra ra-clover" aria-hidden="true"></span>
+                <h3>Halfling</h3>
+                <p>Pequenos, discretos e absurdamente sortudos nos piores momentos.</p>
+              </div>
+              <div class="race-back">
+                <p class="race-back-title">Traços raciais</p>
+                <dl>
+                  <div><dt>Bônus</dt><dd>+2 Carisma</dd></div>
+                  <div><dt>Longevidade</dt><dd>150 anos</dd></div>
+                  <div><dt>Talento</dt><dd>Sorte dos pequenos</dd></div>
+                  <div><dt>Classes afins</dt><dd>Ladino, Arqueiro</dd></div>
+                </dl>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="race-card" tabindex="0">
+              <div class="race-front">
+                <span class="ra ra-dragon" aria-hidden="true"></span>
+                <h3>Draconato</h3>
+                <p>Descendentes dos dragões, carregam fogo ancestral no sangue.</p>
+              </div>
+              <div class="race-back">
+                <p class="race-back-title">Traços raciais</p>
+                <dl>
+                  <div><dt>Bônus</dt><dd>+2 Força</dd></div>
+                  <div><dt>Longevidade</dt><dd>80 anos</dd></div>
+                  <div><dt>Talento</dt><dd>Sopro de dragão</dd></div>
+                  <div><dt>Classes afins</dt><dd>Guerreiro, Mago</dd></div>
+                </dl>
+              </div>
+            </article>
+          </li>
+        </ul>
       </section>
 
       <section id="classes">
