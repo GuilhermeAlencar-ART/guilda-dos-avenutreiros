@@ -1,0 +1,137 @@
+.races {
+    list-style:none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.races li {
+    perspective: 120rem;
+}
+
+.race-card {
+    display: grid;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s var(--ease-out);
+}
+
+.races > li:is(:hover, :focus-within) .race-card {
+    transform: rotateY(180deg);
+}
+
+.race-front,
+.race-back {
+    grid-area: 1 / 1;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+    min-height: 30rem;
+    padding: 3.2rem 2.8rem;
+    border: 1px solid var(--color-border);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.race-front {
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(
+        ellipse 70% 50% at 50% 30%,
+        color-mix(in srgb, var(--color-gold) 12%, transparent),
+        transparent 70%
+    ),
+    var(--color-surface);
+}
+
+.race-front .ra {
+    font-size: 5.1rem;
+    color: var(--color-gold);
+    text-shadow: 0 0 2rem color-mix(in srgb, var(--color-gold) 40%, transparent);
+
+}
+
+.race-front h3 {
+    font-size: 2.6rem;
+    line-height: 1.2;
+    color: var(--color-gold-light);
+}
+
+.race-front p {
+    max-width: 28ch;
+    font-size: 1.6rem;
+    font-style: italic;
+    color: var(--color-text-muted);
+}
+
+.race-front::after{
+    content: "ver traços do outro lado";
+    content: "ver traços do outro lado" / "";
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    font-family: var(--font-label);
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: var(--color-text-faint);
+
+}
+
+.race-back {
+    transform: rotateY(180deg);
+    background: radial-gradient(
+        ellipse at 50% 0%,
+        color-mix(in srgb, var(--color-blood-bright) 35%, transparent),
+        transparent 70%
+    ),
+    linear-gradient(
+        180deg,
+        #2a1410,
+        #140b09
+    );
+    border-color: color-mix(in srgb, var(--color-gold) 50%, transparent);
+}
+
+.race-back-title {
+    margin-bottom: 0.4rem;
+    font-family: var(--font-label);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.24rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-gold);
+}
+
+.race-back dl {
+    display: grid;
+    gap: 1.2rem;
+
+    
+}
+
+.race-back dl div {
+ display: flex;
+ justify-content: space-between;
+ align-items: baseline;
+ gap: 1.6rem;
+ padding-bottom: 1rem;
+ border-bottom: 1px solid color-mix(in srgb, var(--color-gold) 15%, transparent);
+}
+
+.race-back dt {
+    flex-shrink: 0;
+    font-family: var(--font-label);
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+
+}
+
+.race-back dd {
+    font-size: 1.6rem;
+   color: right;
+   color: var(--color-gold-light);
+}
