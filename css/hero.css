@@ -83,11 +83,21 @@
   font-weight: 900;
   line-height: 1.05;
   margin: 1.2rem 0;
-  color: var(--color-gold-light);
+   color: transparent;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--color-gold-light) 60%, white) 0%,
+    var(--color-gold) 50%,
+    color-mix(in srgb, var(--color-gold) 55%, black) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+
   filter: drop-shadow(0 0 2.4rem rgb(201 162 75 / 0.3));
   animation:
     rise 1s 0.15s var(--ease-out) both,
     flicker 4s 1.2s ease-in-out infinite alternate;
+
 }
 
 .hero h1 + p {
