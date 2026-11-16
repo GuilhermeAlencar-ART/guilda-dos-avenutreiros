@@ -20,9 +20,10 @@
     <link rel="stylesheet" href="css/hero.css" />
     <link rel="stylesheet" href="css/members.css" />
     <link rel="stylesheet" href="css/quests.css" />
-    <!-- NOVO: folha de estilo da seção de raças -->
     <link rel="stylesheet" href="css/races.css" />
     <link rel="stylesheet" href="css/classes.css" />
+    <!-- NOVO: folha de estilo das perguntas frequentes -->
+    <link rel="stylesheet" href="css/faq.css" />
     <link rel="stylesheet" href="css/footer.css" />
   </head>
 
@@ -52,6 +53,8 @@
         <p>Acompanhe nossos heróis, escolha sua raça e sua classe e junte-se a nós.</p>
         <div class="hero-actions">
           <a class="button" href="#join">Entrar na guilda</a>
+          <!-- NOVO: segundo botão, na variação só com contorno (.button-outline) -->
+          <a class="button button-outline" href="#members">Ver membros de destaque</a>
         </div>
         <dl class="hero-stats">
           <div>
@@ -237,15 +240,13 @@
 
       <section id="races">
         <h2>Raças aceitas</h2>
-        <!-- NOVO: o texto de apoio agora avisa que os cards viram -->
         <p>
           A guilda recebe aventureiros de todos os povos. Passe o cursor ou toque em um card para ver os traços de cada
           raça.
         </p>
 
-        <!-- NOVO: lista das seis raças. Cada li é o "palco" (não gira), o article.race-card é a
-             carta que gira, e dentro dela ficam as duas faces: .race-front e .race-back.
-             O tabindex="0" deixa o card alcançável pela tecla Tab, mesmo sem ser link nem botão -->
+        <!-- Cada li é o "palco" (não gira), o article.race-card é a carta que gira,
+             e dentro dela ficam as duas faces: .race-front e .race-back -->
         <ul class="races">
           <li>
             <article class="race-card" tabindex="0">
@@ -399,7 +400,42 @@
 
       <section id="faq">
         <h2>Perguntas frequentes</h2>
-        <p>Tudo o que um novo aventureiro precisa saber.</p>
+        <!-- NOVO: texto de apoio igual ao do site original -->
+        <p>Tudo o que um novo aventureiro precisa saber antes de assinar a ficha.</p>
+
+        <!-- NOVO: acordeão sem JavaScript. Cada details é uma pergunta: o summary fica sempre
+             visível e o resto só aparece quando ele está aberto. O mesmo name="faq" em todos
+             faz o navegador fechar o aberto quando outro abre. O open deixa a primeira já aberta -->
+        <div class="faq-list">
+          <details name="faq" open>
+            <summary>Qualquer um pode entrar na guilda?</summary>
+            <p>
+              Sim, desde que não tenha tendência maligna. Aventureiros do nível 1 ao 60 são bem-vindos, e o conselho
+              avalia cada ficha pessoalmente.
+            </p>
+          </details>
+          <details name="faq">
+            <summary>Quais raças a guilda aceita?</summary>
+            <p>
+              Humanos, elfos, anões, orcs, halflings e draconatos. A guilda julga cada aventureiro por seus feitos, nunca
+              pelo seu sangue.
+            </p>
+          </details>
+          <details name="faq">
+            <summary>Como funcionam os ranks das missões?</summary>
+            <p>
+              As missões vão do rank D, tarefas simples para iniciantes, ao rank S, contratos de perigo mortal. Cada rank
+              exige um nível mínimo para ser aceito.
+            </p>
+          </details>
+          <details name="faq">
+            <summary>Como me torno um membro de destaque?</summary>
+            <p>
+              Os cinco aventureiros de maior nível ganham um lugar no Salão dos Heróis. Complete missões, suba de nível e
+              seu retrato pode estar lá.
+            </p>
+          </details>
+        </div>
       </section>
 
       <section id="join">
