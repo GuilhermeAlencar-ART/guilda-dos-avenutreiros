@@ -1,9 +1,14 @@
 .hero {
+  display: grid;
+  place-content: center;
+  justify-content: center;
+  gap:2rem;
+  min-height: min(92vh, 90rem);
   position: relative;
   isolation: isolate;
   overflow: hidden;
   text-align: center;
-  padding-block: 8rem;
+  
   background:
     radial-gradient(ellipse 70% 55% at 50% 105%, rgb(179 38 30 / 0.38), transparent 70%),
     radial-gradient(ellipse 50% 40% at 50% 40%, rgb(201 162 75 / 0.08), transparent 70%);
