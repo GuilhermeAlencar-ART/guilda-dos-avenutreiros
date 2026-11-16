@@ -155,7 +155,7 @@ a[href^="https"]::after {
 
 
 .button {
-  display: inline-block;
+  display: inline-flex;
   padding: 1.5rem 2.9rem;
   font-family: var(--font-label);
   background: linear-gradient(180deg, var(--color-blood-bright), var(--color-blood));
@@ -167,6 +167,9 @@ a[href^="https"]::after {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.18rem;
+  box-shadow:
+  inset 0 0 0 0.3rem rgb(11 9 8 / 0.55),
+  0 1rem 3rem -1rem rgb(179 38 30 / 0.7);
   transition: translate.3s var(--ease-out),
   filter 0.3s,
   box shadow 0.3s;
@@ -177,10 +180,23 @@ a[href^="https"]::after {
   
   translate: 0 -0.2rem;
   filter: brightness(1.15);
-  box-shadow: 0 1.4rem 4rem -0.8rem rgb(179 38 30 / 0.9);
-
+  box-shadow:
+  inset 0 0 0 0.3rem rgb(11 9 8 / 0.55),
+  0 1.4rem 4rem -0.8rem rgb(179 38 30 / 0.7);
 }
 
+.button-outline {
+color: var(--color-text);
+background: transparent;
+border-color: var(--color-border);
+box-shadow: none;
+}
+
+.button-outline:hover {
+  color: var(--color-gold-light);
+  border-color: var(--color-border);
+   box-shadow: 0 0 2.4rem -0.6rem color-mix(in srgb, var(--color-gold) 50%, transparent);
+}
 
 
 .button,
