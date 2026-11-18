@@ -10,6 +10,7 @@
     
       :root {
   font-size: 62.5%;
+  color-scheme: dark;
 
   /* Cores */
   --color-bg: #0b0908;
@@ -24,6 +25,8 @@
   --color-text-muted: #a39483;
   --color-text-faint: #6f6255;
   --color-ember: #d9826b; 
+  --color-input:#0c0908;
+  --color-danger:#e5776b;
 
   /* Fontes */
   --font-display: 'Cinzel Decorative', 'Cinzel', Georgia, serif;
@@ -79,6 +82,13 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }
 
 h1,
@@ -156,6 +166,8 @@ a[href^="https"]::after {
 
 .button {
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
   padding: 1.5rem 2.9rem;
   font-family: var(--font-label);
   background: linear-gradient(180deg, var(--color-blood-bright), var(--color-blood));
@@ -194,7 +206,7 @@ box-shadow: none;
 
 .button-outline:hover {
   color: var(--color-gold-light);
-  border-color: var(--color-border);
+  border-color: var(--color-gold);
    box-shadow: 0 0 2.4rem -0.6rem color-mix(in srgb, var(--color-gold) 50%, transparent);
 }
 
